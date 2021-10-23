@@ -881,6 +881,7 @@ ul {
   text-align: left;
   color: var(--primary-text-color);
   text-decoration: none;
+  margin-bottom: 4px;
 }
 .img-headline-subtitle {
   font-family: var(--main-font);
@@ -891,5 +892,56 @@ ul {
   color: var(--secondary-text-color);
   text-decoration: none;
 }
+.photo-img {
+  display: block;
+}
+.link.photo-link {
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.link.photo-link:hover,
+.link.photo-link:focus {
+  transform: translateY(0);
 
+  display: block;
+  background: var(--third-text-color);
+
+  box-sizing: border-box;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
+.photo {
+  position: relative;
+  overflow: hidden;
+}
+.photo-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateY(101%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  display: flex;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  background-color: var(--title-text-color);
+
+  color: var(--third-text-color);
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.555;
+  letter-spacing: 0.03em;
+}
+
+.photo-link:hover .photo-overlay,
+.photo-link:focus .photo-overlay {
+  transform: translateY(0);
+}
+
+.overlay-text {
+  text-align: left;
+  padding-right: 24px;
+  padding-left: 24px;
+}
 /*===========END OF GALLERY OF WORKS=============*/
