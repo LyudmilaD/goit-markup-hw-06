@@ -194,18 +194,18 @@ ul {
   fill: var(--title-text-color);
 }
 
-.menu.list.menu-link.menu-link-blue.link.current {
+.menu-link.menu-link-blue.link.current {
   position: relative;
 
   color: var(--title-text-color);
 }
 
-.menu.list.menu-link.menu-link-blue.link.current::after {
+.menu-link.menu-link-blue.link.current::after {
   content: "";
 
   position: absolute;
   left: 0;
-  bottom: -1px;
+  bottom: 0;
 
   display: block;
   width: 100%;
