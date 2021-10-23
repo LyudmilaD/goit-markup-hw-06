@@ -346,6 +346,8 @@ ul {
   width: 70px;
   height: 70px;
 }
+.svg-item {
+}
 
 .features-item .advantages-item {
   font-family: var(--main-font);
