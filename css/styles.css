@@ -221,6 +221,7 @@ ul {
   text-align: center;
   font-family: var(--main-font);
   font-weight: 900;
+  height: 600px;
   font-size: 44px;
   line-height: 1.36;
   letter-spacing: 0.06em;
@@ -231,6 +232,7 @@ ul {
 }
 .main-section {
   max-width: 1600px;
+  height: 600px;
   text-transform: uppercase;
   background-size: cover;
   background-repeat: no-repeat;
@@ -286,7 +288,85 @@ ul {
   border-radius: 4px;
   color: var(--third-text-color);
   background-color: var(--title-text-color);
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+.modal-btn:hover,
+.modal-btn:focus {
+  color: var(--third-text-color);
+  background-color: var(--title-text-color);
+}
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  z-index: 1;
+
+  opacity: 1;
+
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.backdrop.is-hidden .modal {
+  transform: translate(-50%, -50%) scale(0.6);
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  width: 530px;
+  height: 580px;
+
+  background-color: var(--third-text-color);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+  background-color: var(--title-text-color);
+}
+
+.close-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 30px;
+  height: 30px;
+  color: #000000;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  cursor: pointer;
+
+  background-color: var(--third-text-color);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+}
+.modal-svg {
+  fill: currentColor;
+}
+
 /*=============END HERO=============*/
 /*=============FEATURES=============*/
 .features {
