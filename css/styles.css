@@ -509,7 +509,7 @@ ul {
 
 .form-checkbox:focus + .checkbox,
 .form-checkbox:hover + .checkbox {
-  fill: var(--primary-text-color);
+  fill:var(--title-text-color);
 }
 
 .form-checkbox:checked + .checkbox {
@@ -518,7 +518,7 @@ ul {
   fill: var(--title-text-color);
 
   background-color: var(--title-text-color);
-  background-image: url(../images/check.svg);
+  background-image: url ;
   background-size: contain;
 }
 
