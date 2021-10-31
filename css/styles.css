@@ -1081,7 +1081,9 @@ ul {
 .signup-svg {
   fill: var(--third-text-color);
 }
-
+.signup-icon {
+  border: none;
+}
 /*============END FOOTER=============*/
 
 /*============CONTENT OF PAGE PORTFOLIO=============*/
